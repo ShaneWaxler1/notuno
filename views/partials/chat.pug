@@ -1,0 +1,16 @@
+.chat#chatID
+    div#chat-area Chat
+        .row
+            .messages.col-lg-6.well.well-sm
+        .row
+            .col-lg-6
+                .input-group.message-form
+                    input.form-control(type='text', placeholder='Message...')
+                    span.input-group-btn
+                        button.btn.btn-default(type='submit') Send
+
+    form.form-inline#initial-form
+        .form-group
+            label(for='who-are-you') User:
+            input#who-are-you.form-control(type='text', value = user_id, disabled,)
+        button.btn.btn-primary(type='submit') Start Chatting

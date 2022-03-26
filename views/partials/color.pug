@@ -1,0 +1,43 @@
+.ColorPicker#ColorPicker()
+    button(id="redColorPickerButton" class="ColorPickerButton") Red
+    button(id="blueColorPickerButton" class="ColorPickerButton") Blue
+    button(id="greenColorPickerButton" class="ColorPickerButton") Green
+    button(id="yellowColorPickerButton" class="ColorPickerButton") Yellow
+script.
+    let redColorPickerButton = document.getElementById("redColorPickerButton");
+    let blueColorPickerButton = document.getElementById("blueColorPickerButton");
+    let greenColorPickerButton = document.getElementById("greenColorPickerButton");
+    let yellowColorPickerButton = document.getElementById("yellowColorPickerButton");
+     redColorPickerButton.addEventListener("click",function()
+    {
+        let playUrl = redColorPickerButton.value;
+        console.log(playUrl);
+        let json = fetch(playUrl,{ method: "POST" }).then((response) => response.json());
+        disableAll()
+    });
+    blueColorPickerButton.addEventListener("click",function()
+    {
+        let playUrl = blueColorPickerButton.value;
+        console.log(playUrl)
+        let json = fetch(playUrl,{ method: "POST" }).then((response) => response.json())
+        disableAll()
+    });
+    greenColorPickerButton.addEventListener("click",function()
+    {
+        let playUrl = greenColorPickerButton.value;
+        console.log(playUrl)
+        let json = fetch(playUrl,{ method: "POST" }).then((response) => response.json());
+        disableAll()
+    });
+    yellowColorPickerButton.addEventListener("click",function()
+    {
+        let playUrl = yellowColorPickerButton.value;
+        console.log(playUrl)
+        let json = fetch(playUrl,{ method: "POST" }).then((response) => response.json());
+        disableAll()
+    });
+    function disableAll()
+    {
+        let colorPicker = document.getElementById("ColorPicker")
+        colorPicker.style.visibility= "hidden";
+    }

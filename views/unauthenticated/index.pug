@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+
+  div#indexPageMainContent
+    // img(src="/images/notunoLogo.png")
+    h1 NOTUNO
+    br
+    //- input(type="button" value="PLAY").IndexPageButtonPlay
+    button.IndexPageButtonPlay(
+      type='button',
+      onclick = " document.location = 'users/login' "
+      ) Play

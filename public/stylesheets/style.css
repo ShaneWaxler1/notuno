@@ -1,0 +1,602 @@
+.uk-navbar-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Global style things*/
+* {
+  font-family: "Work Sans";
+}
+
+body {
+  /* background-image: url(../images/bubblegum-gradient.png); */
+  background-repeat: round;
+  max-width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  text-align: center;
+  /* padding: 5rem; */
+}
+/* NavBar Style */
+.nav-bar {
+  max-width: auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  gap: 5px 5px;
+  justify-content: space-evenly;
+}
+#nav-list {
+  width: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#nav-item {
+  float: left;
+  flex-grow: 1;
+  flex-shrink: 3;
+}
+#nav-item a {
+  display: inline-flex;
+  padding: 1em 5em;
+  background-color: rgb(47, 155, 243);
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+#nav-item a:hover {
+  background: gold;
+}
+/* Main landing page */
+#indexPageMainContent {
+  text-align: center;
+  color: black;
+  font-size: x-large;
+  font-style: normal;
+  border-radius: 1rem;
+  margin: 10em;
+  padding: 2em;
+}
+.IndexPageButtonPlay {
+  text-decoration: none;
+  background-color: Gold;
+  border: none;
+  color: black;
+  padding: 25px 150px;
+  text-decoration: none;
+  font-size: large;
+  border-radius: 1rem;
+}
+.IndexPageButtonPlay:hover {
+  background-color: rgb(47, 155, 243);
+}
+/* Registration Page */
+.registrationformcontainer > form {
+  padding: 5em;
+  margin: 10em;
+  border: solid gold;
+  box-shadow: 2px 2px 2px rgb(128, 128, 128);
+}
+#registration-legend {
+  text-align: center;
+  font-size: xx-large;
+}
+#register-button {
+  background-color: gold;
+  border-radius: 5px;
+  padding: 1em 1em;
+  color: black;
+}
+#register-button:hover {
+  background-color: rgb(47, 155, 243);
+}
+/* Login Page */
+#login-form {
+  padding: 5em;
+  margin: 10em;
+  border: solid rgb(47, 155, 243);
+  box-shadow: 2px 2px 2px rgb(128, 128, 128);
+}
+#login-legend {
+  text-align: center;
+  font-size: xx-large;
+}
+#login-button {
+  background-color: rgb(47, 155, 243);
+  border-radius: 5px;
+  padding: 1em 1em;
+  color: black;
+}
+#login-button:hover {
+  background-color: gold;
+}
+/* Lobby Page */
+.lobby-body-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3em;
+  /* padding: 3em; */
+  margin: 2em;
+}
+.lobby-body-container > div {
+  background: rgb(47, 155, 243);
+  box-shadow: 5px 5px 5px rgb(128, 128, 128);
+  padding: 1em;
+  margin: 1em;
+  color: black;
+  border-radius: 50px;
+  grid-area: auto;
+  flex-grow: 1;
+}
+.lobby-body-container > div:nth-child(odd) {
+  background: gold;
+}
+.game-list-container {
+  background: white;
+  border: inset rgba(82, 82, 82, 0.3);
+  text-align: left;
+}
+#create {
+  margin: 1em 10em;
+  padding: 1em 1em;
+  text-align: center;
+  font-size: medium;
+  border-radius: 5px;
+  line-height: 1.1rem;
+  color: white;
+  background-color: palevioletred;
+}
+#create:hover {
+  background-color: rgb(47, 155, 243);
+}
+h1 {
+  padding: 0rem 3rem;
+}
+
+.games {
+  padding-left: 100px;
+}
+
+#game-list {
+  list-style-type: none;
+  padding: 10px;
+  margin: 1em;
+  overflow: scroll;
+  height: 300px;
+}
+#game-list li {
+  background: rgb(47, 155, 243);
+  padding: 5px;
+  margin: 5px;
+  position: relative;
+}
+#game-list button {
+  float: right;
+  padding: 3px;
+  margin: 2px;
+  background-color: gold;
+  border-radius: 5px;
+}
+#game-list button:hover {
+  background-color: palevioletred;
+}
+#logout-button {
+  margin-top: 5em;
+  margin-left: 80%;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(82, 82, 82, 0);
+  color: black;
+  border-color: solid black;
+  text-align: center;
+  width: 10em;
+}
+#lobby-button {
+  margin-left: 80%;
+  margin-bottom: 3rem;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(82, 82, 82, 0);
+  color: black;
+  border-color: solid black;
+  text-align: center;
+  width: 10em;
+}
+#lobby-button:hover,
+#logout-button:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Chat */
+#chat-area {
+  display: none;
+  background: rgb(255, 255, 253);
+  box-shadow: 2px 2px 10px black;
+  border-radius: 30px;
+  /* height: 400px; */
+  color: black;
+  padding: 1rem;
+}
+.messages {
+  min-height: 300px;
+  padding: 1rem;
+  /* Flips the direction of box so scroll stays at the bottom */
+  max-height: 5rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-wrap: break-word;
+}
+.message {
+  padding-top: 2px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 3px;
+  margin-top: 2px;
+}
+.message:nth-child(odd) {
+  background-color: #fff;
+}
+time.timeago {
+  color: #777;
+  font-style: italic;
+  padding-right: 8px;
+  padding-left: 6px;
+}
+
+span.user {
+  color: #369;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+/* GAME PAGE */
+#game-id {
+  /* visibility: hidden; */
+}
+#game-board-body {
+  margin-left: 20px;
+  margin-right: 20px;
+  /* background-color: green; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#game-board {
+  flex-grow: 1;
+  min-width: 600px;
+  /* background-color: red; */
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px 100px; */
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 154.667px 154.667px 154.667px;
+
+  grid-template-areas:
+    "opponent-hand opponent-hand opponent-hand opponent-hand"
+    "decks decks decks decks"
+    "hand hand hand hand";
+}
+#opponent-hands {
+  /* background-color: orange; */
+  grid-area: opponent-hand;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#decks {
+  /* background-color: purple; */
+  grid-area: decks;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#hand {
+  /* background-color: gray; */
+  grid-area: hand;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-turn {
+  border: 2px solid #aaff00;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #aaff00;
+}
+
+/* CARDS */
+.card {
+  width: 85px;
+  height: 130px;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-left: 7px;
+  border-style: solid;
+  /* border: black; */
+}
+.card:hover {
+  background-color: gray;
+}
+/* #discard {
+  
+} */
+/* #draw {
+} */
+#back-card {
+  background-color: white;
+}
+#yellow-card {
+  background-color: yellow;
+}
+#red-card {
+  background-color: red;
+}
+#green-card {
+  background-color: green;
+}
+#blue-card {
+  background-color: blue;
+}
+#Wild-card {
+  background-color: orange;
+}
+#card-back {
+  color: white;
+}
+
+/* .hand {
+  display: flex;
+  max-width: 500px;
+}
+.UnoCard {
+  display: flex;
+  font-size: 1.5rem;
+  background-color: white;
+  color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  text-decoration: none;
+  max-height: 120px;
+  max-width: 85px;
+  min-height: 120px;
+  min-width: 85px;
+  -webkit-text-stroke: 2px black;
+}
+.PlayerCard:hover {
+  margin-bottom: +2rem;
+  margin-top: -2rem;
+  animation: shake 0.5s infinite;
+}
+.red {
+  width: inherit;
+  height: inherit;
+  background-color: red;
+}
+.blue {
+  width: inherit;
+  height: inherit;
+  background-color: blue;
+}
+.yellow {
+  width: inherit;
+  height: inherit;
+  background-color: yellow;
+}
+.green {
+  width: inherit;
+  height: inherit;
+  background-color: green;
+}
+.Wild {
+  background-image: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+}
+.unoCardButton {
+  text-decoration: none;
+  border: none;
+  font-size: 100%;
+  color: white;
+  width: inherit;
+  max-height: 120px;
+  max-width: 85px;
+  min-height: 120px;
+  min-width: 85px;
+  background-color: inherit;
+  background: rgba(255, 165, 0, 0);
+}
+.unoCardButtonText {
+  font-size: 1.5rem;
+}
+.opponentStatus {
+  font-size: 0.5;
+  color: black;
+  height: fit-content;
+  background-color: white;
+  display: block;
+}
+.handAndStatus {
+  display: block;
+}
+.game-title h1 {
+  text-align: center;
+}
+.BlankCard:hover {
+  margin-bottom: +0rem;
+  margin-top: -0rem;
+}
+.LeftPlayerHand {
+  grid-column: 1;
+  grid-row: 2;
+  rotate: 90deg;
+}
+.PlayArea {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 2fr 0.1fr 3fr 1fr;
+  grid-template-rows: auto auto auto auto;
+}
+.OtherPlayerHands {
+  grid-row: 1;
+  grid-column: 3;
+  max-height: 200px;
+  display: inline-flex;
+}
+.PlayerHand {
+  grid-column: 3;
+  grid-row: 3;
+}
+#playerHand {
+  background-color: #369;
+
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.PlayPile {
+  grid-row: 2;
+  grid-column: 3;
+  align-self: center;
+  margin: 5rem 10rem;
+}
+.Deck {
+  grid-row: 2;
+  grid-column: 4;
+}
+.PlayPile.UnoCard:hover {
+  margin-bottom: +0rem;
+  margin-top: -0rem;
+}
+.UnoCard:hover {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(0deg);
+  }
+} */
+
+#game-list li {
+  background: rgb(47, 155, 243);
+  position: relative;
+}
+.chat {
+  grid-area: 1 / 1 / 5 / 3;
+  padding: 1rem 4rem;
+  max-width: 500px;
+  /* max-height: 450px !important; This simply doesn't work for some reason... */
+  justify-self: stretch;
+}
+/* 
+.ColorPicker {
+  grid-row: 3;
+  grid-column: 4;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  border-width: 2px;
+  -webkit-text-stroke: 2px black;
+  color: white;
+  font-weight: 100;
+  visibility: hidden;
+}
+#redColorPickerButton {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: red;
+  color: white;
+  font-size: 3rem;
+}
+#blueColorPickerButton {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: blue;
+  color: white;
+  font-size: 3rem;
+}
+#greenColorPickerButton {
+  grid-row: 2;
+  grid-column: 1;
+  background-color: green;
+  color: white;
+  font-size: 3rem;
+}
+#yellowColorPickerButton {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: gold;
+  color: white;
+  font-size: 3rem;
+}
+#yourTurn.NotYourTurn {
+  grid-column: 4;
+  grid-row: 1;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  font-size: 1.7rem;
+}
+#yourTurn.YourTurn {
+  grid-column: 4;
+  grid-row: 1;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  color: white;
+  font-size: 1.7rem;
+} */

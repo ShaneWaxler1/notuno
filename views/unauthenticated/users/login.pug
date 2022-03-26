@@ -1,0 +1,18 @@
+extends ../../layout
+block content
+    div.login-form-container.uk-flex.uk-flex-center
+        form#login-form.uk-form-stacked(action='/users/login' method='post')
+            fieldset.uk-fieldset
+                legend#login-legend Login 
+                .uk-margin
+                    .uk-inline 
+                        span.uk-form-icon(uk-icon ='icon: user')
+                        input.uk-input(type='text' placeholder='Email' name='email') 
+                .uk-margin
+                    .uk-inline
+                        span.uk-form-icon(uk-icon='icon: lock')
+                        input.uk-input(type='password' placeholder='Password' name='password') 
+                div.uk-flex.uk-flex-center
+                    button#login-button(type='input' action='submit' uk-icon='sign-in') Login
+                p Don't have an account? 
+                    a(href="./register") Sign Up

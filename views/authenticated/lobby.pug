@@ -1,0 +1,49 @@
+extends ../layout
+
+block content 
+	nav.uk-navbar-container.uk-navbar-transparent(uk-navbar)
+		.uk-navbar-left 
+			ul.uk-navbar-nav 
+				li.uk-active 
+					a(href='') Lobby 
+				li 
+					a(href='') About
+
+		.uk-navbar-right 
+			ul.uk-navbar-nav 
+				li
+					a(class='' href='') Account 
+					.uk-navbar-dropdown
+						ul.uk-nav.uk-navbar-dropdown-nav#account-dropdown 
+							li
+								div 
+									a.uk-icon-button(href="" uk-icon="user")
+									| &nbsp; Username
+									//- Put something like '!{username}' here
+							br
+							li
+								a(href='') Settings 
+							br
+							li 
+								button.uk-button.uk-button-default(
+									type = 'button',
+									onclick = "document.location = '/users/logout'"
+									) Logout
+
+	.lobby-body-container
+		.games(method='post', action='games/join' style='padding-left:30px; padding-right:30px; padding-top:30px')
+			//- div#game-listing Current Games
+			div 
+				ul.uk-subnav.uk-subnav-divider.game-list-choice
+					li.uk-active#all-games
+						a All Games 
+					li#user-games
+						a Games You're In
+				.game-list-container
+					ul#game-list
+			button#create Create Game
+
+		include ../partials/chat
+
+block footer
+	script(src="/javascripts/lobby.js")

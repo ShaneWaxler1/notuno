@@ -1,0 +1,26 @@
+extends ../../layout 
+block content
+	div.registrationformcontainer.uk-flex.uk-flex-center
+		form#registration-form.uk-form-stacked(method="POST" action="/users/register")
+			fieldset.uk-fieldset
+				legend#registration-legend Register
+				.uk-margin
+					.uk-inline
+						span.uk-form-icon(uk-icon ='icon: user')
+						input.uk-input(type='text' placeholder='Username' name='username') 
+				.uk-margin
+					.uk-inline
+						span.uk-form-icon(uk-icon ='icon: mail')
+						input.uk-input(type='email' placeholder='Email' name='email') 
+				.uk-margin
+					.uk-inline
+						span.uk-form-icon(uk-icon='icon: lock')
+						input.uk-input(type='password' placeholder='Password' name='password') 
+				.uk-margin
+					.uk-inline
+						span.uk-form-icon(uk-icon='icon: lock')
+						input.uk-input(type='password' placeholder='Confirm Password' name='confirmPassword')
+				div.uk-flex.uk-flex-center
+					button#register-button(type='input' action='submit' uk-icon='sign-in') Register
+				p Already have an account? 
+					a(href="./login") Login

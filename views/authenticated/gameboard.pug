@@ -1,0 +1,54 @@
+extends ../layout
+	
+block content
+	title Uno Game !{id}
+	nav.uk-navbar-container.uk-navbar-transparent(uk-navbar)
+		.uk-navbar-left 
+			ul.uk-navbar-nav 
+				li.uk-active 
+					a(href='./lobby.pug') Lobby 
+				li 
+					a(href='') About
+
+		.uk-navbar-right 
+			ul.uk-navbar-nav 
+				li
+					a(class='' href='') Account 
+					.uk-navbar-dropdown
+						ul.uk-nav.uk-navbar-dropdown-nav#account-dropdown 
+							li
+								div 
+									a.uk-icon-button(href="" uk-icon="user")
+									| &nbsp; Username
+									//- Put something like '!{username}' here
+							br
+							li
+								a(href='') Settings 
+							br
+							li 
+								button.uk-button.uk-button-default(
+									type = 'button',
+									onclick = "document.location = '/users/logout'"
+									) Logout
+	
+	.game-title 
+		#game-id !{id}
+		h2 game number !{id}
+	#game-board-body 
+		#game-board 
+			#opponent-hands 
+			#decks
+				//- .card#discard
+				//- .card#draw
+			#hand
+		include ../partials/chat
+		//- include ../partials/color
+		//- Button(id = "yourTurn" class="YourTurn" disabled) Your Turn
+	script(src='/socket.io/socket.io.js') 
+	script(src="/javascripts/gameplay.js")
+	script(src="/javascripts/create-cards.js") 
+	//- script.
+		//- const game_id = #{id}
+		//- window.addEventListener("load",(event) => {
+		//- 	updateGameState(game_id);
+		//- });
