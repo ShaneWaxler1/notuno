@@ -3,4 +3,4 @@
 ### Description
 Online multiplayer Uno app currently in development. Run on Heroku.
 
-Link to play coming soon.
+https://notuno-app.herokuapp.com/
