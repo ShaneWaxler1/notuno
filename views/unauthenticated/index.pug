@@ -1,13 +1,14 @@
 extends ../layout
 
 block content
+  nav.navbar.navbar-expand-lg.navbar-light
+    a.navbar-brand.mb-0.h1(href="#") Notuno
+    a.nav-link.ml-auto(href="./users/login") Login/Register
 
-  div#indexPageMainContent
-    // img(src="/images/notunoLogo.png")
-    h1 NOTUNO
-    br
-    //- input(type="button" value="PLAY").IndexPageButtonPlay
-    button.IndexPageButtonPlay(
-      type='button',
-      onclick = " document.location = 'users/login' "
-      ) Play
+  .container
+    .row.jusify-content-center
+      .col-6
+        h1 Notuno !{user}
+        p Play Uno online with friends.
+      .col-6 
+        button.btn.btn-primary Play Online
